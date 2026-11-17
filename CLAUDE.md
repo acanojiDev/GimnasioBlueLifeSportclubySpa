@@ -20,6 +20,8 @@ La guía general de webs de presentación se carga desde `~/.claude/CLAUDE.md`. 
 
 - **Las fotos de `public/img/` están generadas con IA** (ElevenLabs, en `fotos-originales/ia-*.png`): no son del club. Hay que cambiarlas por fotos reales antes de publicar la web definitiva.
 - Falta el logo oficial; ahora la marca es el texto "BlueLife".
+- Nota de Google: la web pone "4,2/5 con más de 150 opiniones"; según el directorio varía entre 4,1 y 4,4 con 100 a 190 reseñas. Los puntos fuertes de la sección de opiniones salen de resúmenes de reseñas.
+- No publicar como dato real nada sin fuente: el circuito numerado del spa, el "primera visita gratis" y el grupo de natación de adultos se quitaron por eso.
 - Datos a confirmar: cuota "desde 32 €/mes" anual (una reseña habla de 39 €), pase de día 10 €, horario (L–V 7:00–22:30, S 9:00–21:00, D 9:00–14:00; otro directorio dice que entre semana cierran a las 23:00) y número de pistas de pádel (5, aunque una fuente dice 4).
 
 ## Publicación

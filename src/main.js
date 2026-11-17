@@ -159,27 +159,15 @@ filters.forEach((btn) => {
   });
 });
 
-/* ---------- Spa: el circuito se enciende paso a paso ---------- */
+/* ---------- Pádel: la foto se desplaza un poco más lenta que el scroll ---------- */
 if (!reduced) {
-  gsap.from('.circuit__step', {
-    autoAlpha: 0, y: 16, stagger: 0.08, duration: 0.6, ease: 'power3.out',
-    scrollTrigger: { trigger: '.circuit', start: 'top 80%' },
+  gsap.fromTo('.padel__bg', { yPercent: -8 }, {
+    yPercent: 8, ease: 'none',
+    scrollTrigger: { trigger: '.padel', start: 'top bottom', end: 'bottom top', scrub: true },
   });
 }
 
-/* ---------- Pádel: la bola va y viene ---------- */
-const ball = $('.padel__court .ball');
-if (ball && !reduced) {
-  const pts = [[64, 34], [142, 68], [58, 72], [150, 26]];
-  const tl = gsap.timeline({ repeat: -1, paused: true });
-  pts.forEach((p, i) => {
-    const [x, y] = pts[(i + 1) % pts.length];
-    tl.to(ball, { attr: { cx: x, cy: y }, duration: 0.9, ease: 'sine.inOut' });
-  });
-  ScrollTrigger.create({ trigger: '.padel', start: 'top bottom', end: 'bottom top', onToggle: (s) => (s.isActive ? tl.play() : tl.pause()) });
-}
-
-/* ---------- Prueba gratis por WhatsApp ---------- */
+/* ---------- Visita por WhatsApp ---------- */
 const form = $('.visit__form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -201,7 +189,7 @@ form.addEventListener('submit', (e) => {
   }
   err.hidden = true;
   const msg = [
-    `Hola, soy ${nombre.value.trim()}. Me gustaría hacer la visita gratis a BlueLife.`,
+    `Hola, soy ${nombre.value.trim()}. Me gustaría visitar BlueLife y que me informéis.`,
     `Me interesa: ${intereses.join(', ')}.`,
     `Me viene bien: ${$('#f-dia').value.toLowerCase()}.`,
   ].join('\n');
